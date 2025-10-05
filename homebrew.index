@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
   <info>
-    <update version="1.0.3">https://raw.githubusercontent.com/aceleo01/aurora-homebrew/main/homebrew.index</update>
+    <update version="1.0.3">https://raw.githubusercontent.com/aceleo01/aurora-homebrew/refs/heads/main/homebrew.index</update>
   </info>
 
   <link name="Firstseed of Heior" href="firstseed_of_heior.xml" />
 </elements>
-
