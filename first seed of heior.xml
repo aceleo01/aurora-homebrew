@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <version>1.0.0</version>
+    <update>https://raw.githubusercontent.com/YourUser/AuroraHomebrewItems/main/index.xml</update>
+  </info>
+
+  <!-- Main Item Element -->
+  <element name="Firstseed of Heior"
+           type="Wondrous Item"
+           source="Homebrew"
+           id="ID_YOURNAME_HOMESEED_FIRSTSEED_OF_HEIOR">
+    <description>
+      The Firstseed of Heior — Wondrous Item, legendary (requires attunement).<br/>
+      <strong>Timeless Vitality.</strong> While attuned to the Seed, your natural lifespan is doubled and you no longer show physical signs of aging. You are immune to disease and cannot be aged magically.<br/>
+      <strong>Constitution of the Eternal.</strong> Your Constitution score becomes 19 while you are attuned to the Seed. This has no effect if your Constitution is already 19 or higher.<br/>
+      <strong>Unrelenting Resilience.</strong> Once per day, the first time you would drop to 0 hit points as a result of damage, instead drop to 1 hit point.<br/>
+      <strong>Siphoning Strikes.</strong> Once per day, you may empower your melee attacks for 1 round with life‑draining energy. During this round, you heal hit points equal to half the damage you deal with melee weapon attacks.<br/>
+      <strong>Aura of Renewal.</strong> You emanate a 10‑foot aura in which you and creatures of your choice are unaffected by the Curse of Dessication.<br/>
+      <strong>Verdant Cantrips.</strong> You learn the <em>Druidcraft</em> and <em>Thorn Whip</em> cantrips. Constitution is your spellcasting ability for these.<br/>
+      <strong>Seed Spells.</strong> While attuned to the Seed, you may cast each of the following spells once per day without expending a spell slot. Constitution is your spellcasting ability for these spells:<br/>
+      1st — Create or Destroy Water, Detect Poison and Disease, Purify Food and Drink, Speak with Animals<br/>
+      2nd — Gust of Wind, Spike Growth, Wither and Bloom<br/>
+      3rd — Plant Growth, Speak with Plants, Blight<br/>
+      4th — Aura of Purity, Stone Shape<br/>
+      5th — Greater Restoration
+    </description>
+    <sheet>
+      <category>Wondrous Item (Legendary)</category>
+      <requires_attunement>true</requires_attunement>
+    </sheet>
+    <rules>
+      <!-- Stat override: if your Con is less than 19, it becomes 19 while attuned -->
+      <stat name="Constitution" value="19" minimum="true" condition="attuned"/>
+
+      <!-- Grant the special features and spells -->
+      <grant type="Feature" id="ID_YOURNAME_HOMESEED_TIMELESS_VITALITY" />
+      <grant type="Feature" id="ID_YOURNAME_HOMESEED_UNRELENTING_RESILIENCE" />
+      <grant type="Feature" id="ID_YOURNAME_HOMESEED_SIPHONING_STRIKES" />
+      <grant type="Feature" id="ID_YOURNAME_HOMESEED_AURA_OF_RENEWAL" />
+
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_DRUIDCRAFT" once_per_day="false" note="Verdant Cantrip" />
+      <grant type="Spell" id="ID_YOURNAME_HOMESEED_SPELL_THORN_WHIP" once_per_day="false" note="Verdant Cantrip" />
+
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_CREATE_OR_DESTROY_WATER" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_DETECT_POISON_AND_DISEASE" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_PURIFY_FOOD_AND_DRINK" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_SPEAK_WITH_ANIMALS" once_per_day="true" note="Seed Spell" />
+
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_GUST_OF_WIND" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_SPIKE_GROWTH" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_YOURNAME_HOMESEED_SPELL_WITHER_AND_BLOOM" once_per_day="true" note="Seed Spell" />
+
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_PLANT_GROWTH" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_SPEAK_WITH_PLANTS" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_BLIGHT" once_per_day="true" note="Seed Spell" />
+
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_AURA_OF_PURITY" once_per_day="true" note="Seed Spell" />
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_STONE_SHAPE" once_per_day="true" note="Seed Spell" />
+
+      <grant type="Spell" id="ID_WOTC_PHB_SPELL_GREATER_RESTORATION" once_per_day="true" note="Seed Spell" />
+    </rules>
+  </element>
+
+  <!-- Define Features used above -->
+  <element name="Timeless Vitality"
+           type="Feature"
+           source="Homebrew"
+           id="ID_YOURNAME_HOMESEED_TIMELESS_VITALITY">
+    <description>
+      While attuned to the Seed, your natural lifespan is doubled, and you no longer show physical signs of aging. You are immune to disease and cannot be aged magically.
+    </description>
+    <rules>
+      <!-- You may need custom scripting; this might just serve as a placeholder in Aurora. -->
+    </rules>
+  </element>
+
+  <element name="Unrelenting Resilience"
+           type="Feature"
+           source="Homebrew"
+           id="ID_YOURNAME_HOMESEED_UNRELENTING_RESILIENCE">
+    <description>
+      Once per day, the first time you would drop to 0 hit points as a result of damage, instead drop to 1 hit point.
+    </description>
+  </element>
+
+  <element name="Siphoning Strikes"
+           type="Feature"
+           source="Homebrew"
+           id="ID_YOURNAME_HOMESEED_SIPHONING_STRIKES">
+    <description>
+      Once per day, you may empower your melee attacks for 1 round with life‑draining energy. During this round, you heal hit points equal to half the damage you deal with melee weapon attacks.
+    </description>
+  </element>
+
+  <element name="Aura of Renewal"
+           type="Feature"
+           source="Homebrew"
+           id="ID_YOURNAME_HOMESEED_AURA_OF_RENEWAL">
+    <description>
+      You emanate a 10‑foot aura in which you and creatures of your choice are unaffected by the Curse of Dessication.
+    </description>
+  </element>
+
+  <!-- If “Wither and Bloom” or “Thorn Whip” are not standard in Aurora, you might need to define them as custom spell elements too. -->
+  <element name="Wither and Bloom"
+           type="Spell"
+           source="Homebrew"
+           id="ID_YOURNAME_HOMESEED_SPELL_WITHER_AND_BLOOM">
+    <description>
+      <!-- Put in whatever description / mechanics your version of Wither and Bloom has -->
+    </description>
+    <rules>
+      <!-- Spell rules if needed -->
+    </rules>
+  </element>
+
+</elements>
