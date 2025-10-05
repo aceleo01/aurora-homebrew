@@ -2,7 +2,7 @@
 <elements>
   <info>
     <version>1.0.0</version>
-    <update>https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/homebrew.index</update>
+    <update>https://raw.githubusercontent.com/aceleo01/aurora-homebrew/refs/heads/main/homebrew.index</update>
   </info>
 
   <link name="Firstseed of Heior" href="firstseed_of_heior.xml" />
